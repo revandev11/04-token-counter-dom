@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Token Counter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>LLM Pricing & Tokens</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Dashboard</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="tokenCounter.html">Token Counter</a>
+  </nav>
+
+  <main>
+    <section id="tokenCounter">
+      <h2>Token Counter</h2>
+      <p>Paste any English text below to estimate how many tokens it would consume when sent to an AI model.</p>
+      <textarea id="inputText" rows="6" placeholder="Type or paste your text here..."></textarea>
+      <div id="stats">
+        <span id="stat-chars">Characters: 0</span>
+        <span id="stat-words">Words: 0</span>
+        <span id="stat-tokens">Estimated tokens: 0</span>
+      </div>
+      <button id="save-btn">Save Snapshot</button>
+      <ul id="history-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Token Counter Lab. Learning about AI tokenization.</p>
+  </footer>
+
+  <script src="tokenCounter.js"></script>
+</body>
+</html>

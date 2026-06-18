@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Tokenization Works</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>LLM Pricing & Tokens</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Dashboard</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="tokenCounter.html">Token Counter</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Understanding Tokens</h2>
+      <p>In English, a token is roughly <strong>three to four characters</strong>, or about <strong>three quarters of a word</strong> on average.</p>
+
+      <h3>Why Tokens Matter</h3>
+      <p>When you send a message to an AI model, it does not process words. It processes <strong>tokens</strong>. Understanding how tokenisation works is one of the most practical skills you can build as a developer working with AI.</p>
+
+      <p>Tokens are important for:</p>
+      <ul>
+        <li><strong>Pricing:</strong> AI providers charge per token, not per word</li>
+        <li><strong>Context Windows:</strong> Models have limits on how many tokens they can process</li>
+        <li><strong>Efficiency:</strong> Optimizing token usage saves money and improves performance</li>
+      </ul>
+
+      <h3>Token Examples</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Text</th>
+            <th>Approximate Token Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hello</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Hello, world!</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>The quick brown fox</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>I am learning JavaScript today</td>
+            <td>6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>How We Approximate Tokens</h3>
+      <p>The exact number depends on the tokeniser each model uses internally. However, we can build a practical approximation:</p>
+      <ol>
+        <li>Take a string of English text as input</li>
+        <li>Remove extra whitespace from the beginning and end</li>
+        <li>Split the text into an array of words</li>
+        <li>Remove any empty items from the array</li>
+        <li>Count the words and multiply by <strong>0.75</strong> to get the approximate token count</li>
+        <li>Round up to the nearest whole number so you never undercount</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Token Counter Lab. Learning about AI tokenization.</p>
+  </footer>
+</body>
+</html>
